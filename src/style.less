@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+}
+
+@codeMaxWidth: 750px;
+@codeMargin: 50px;
+
+#web-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: auto;
+    max-width: @codeMaxWidth * 2 + @codeMargin;
+}
+
+#tlang-container, #mips-container {
+    flex: 1 1 auto;
+    min-height: 500px;
+    min-width: 500px;
+    max-width: @codeMaxWidth;
+}
+
+#mips-container {
+    margin-left: @codeMargin;
+    display: flex;
+    flex-direction: column;
+}
+
+#mips-code {
+    flex: 1 1 auto;
+}
+
+#mips-commands {
+    height: 100px;
+    flex: 0 0 auto;
+}
