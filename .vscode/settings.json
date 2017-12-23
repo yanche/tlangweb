@@ -1,6 +1,8 @@
 {
     "files.exclude": {
         "src/**/*.js": true,
+        "src/**/*.css": true,
+        "src/**/*.html": true,
         "src/**/*.d.ts": true,
         "**/*.map": true,
         "node_modules": true

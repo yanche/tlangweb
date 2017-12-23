@@ -1,12 +1,17 @@
 html
     head
         title A web playground for TLang
-        script(src="./entry.js")
         link(rel="stylesheet" href="./style.css")
     body
         div
             div#web-container
-                div#tlang-container
-                div#mips-container
-                    div#mips-code
-                    div#mips-commands
+                div#code-area
+                    div#tlang-container
+                        textarea#tlang-editor.editor
+                    div#command-container
+                        button#btn-compile Compile
+                        button#btn-run Run
+                    div#mips-container
+                        textarea#mips-editor.editor
+                div#console-area
+        script(src="./entry.js")

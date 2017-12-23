@@ -2,36 +2,48 @@ body {
     margin: 0px;
 }
 
-@codeMaxWidth: 750px;
-@codeMargin: 50px;
+@codeMaxWidth: 500px;
+@commandAreaWidth: 100px;
 
 #web-container {
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
     overflow: auto;
-    max-width: @codeMaxWidth * 2 + @codeMargin;
+    max-width: @codeMaxWidth * 2 + @commandAreaWidth;
+}
+
+#console-area {
+    flex: 0 0 auto;
+    height: 200px;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+#code-area {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    min-height: 800px;
 }
 
 #tlang-container, #mips-container {
     flex: 1 1 auto;
-    min-height: 500px;
-    min-width: 500px;
+    min-height: 300px;
+    min-width: 300px;
     max-width: @codeMaxWidth;
-}
-
-#mips-container {
-    margin-left: @codeMargin;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-#mips-code {
-    flex: 1 1 auto;
-}
-
-#mips-commands {
-    height: 100px;
+#command-container {
+    width: @commandAreaWidth;
     flex: 0 0 auto;
+}
+
+.editor {
+    padding: 0px;
+    width: 100%;
+    flex: 1 1 auto;
 }
